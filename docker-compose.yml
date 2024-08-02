@@ -8,7 +8,7 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: password
     volumes:
-      - ./src/assets/cashforce_dump.sql:/docker-entrypoint-initdb.d/dump.sql
+      - ./backend/src/assets/cashforce_dump.sql:/docker-entrypoint-initdb.d/dump.sql
     ports:
       - "3306:3306"
     networks:
