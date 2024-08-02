@@ -5,13 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/app.ts",
-    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+    "test": "jest ./src/test/**/*.spec.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@alt3/sequelize-to-json-schemas": "^0.3.56",
     "express": "^4.19.2",
     "mysql2": "^3.11.0",
     "sequelize": "^6.37.3",
@@ -19,13 +18,11 @@
     "sequelize-typescript": "^2.1.6"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.17",
     "@types/express": "^4.17.21",
-    "@types/mocha": "^10.0.7",
+    "@types/jest": "^29.5.12",
     "@types/node": "^22.0.2",
     "@types/sequelize": "^4.28.20",
-    "chai": "^5.1.1",
-    "mocha": "^10.7.0",
+    "ts-jest": "^29.2.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   }
