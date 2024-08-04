@@ -1,7 +1,6 @@
 import { OrdersController } from "../../controllers/ordersController";
 import { OrdersService } from "../../services/ordersService";
 import { NextFunction, Request, Response } from "express";
-import "@types/jest";
 
 describe("OrdersController", () => {
     const mockService = new OrdersService();
