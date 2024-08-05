@@ -1,0 +1,18 @@
+{
+  "name": "cashforce",
+  "version": "1.0.0",
+  "description": "Baseados nos requisitos técnicos pré definidos no documento relacionado ao desafio, a stack utilizada foi: - Typescript como linguagem base; - Frontend com VueJS, Tailwind e Vitest; - Backend com Express, Sequelize e Jest; - MySQL como banco de dados.",
+  "main": "index.js",
+  "scripts": {
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "start:frontend": "cd frontend && npm run dev",
+    "start:backend": "cd backend && npm install && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
