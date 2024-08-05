@@ -29,7 +29,7 @@ describe('DefaultTableRow', () => {
     expect(wrapper.find('td').classes()).toContain(customTailwindStyle);
   })
 
-  it.only('renders the expected data', () => {
+  it('renders the expected data', () => {
     const value = {key1: 'value1', key2: 'value2'};
 
     const wrapper = shallowMount(DefaultTableRow, {
