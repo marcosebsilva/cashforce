@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const props = defineProps<{
+  defineProps<{
     value: object,
     style?: string,
   }>();
@@ -9,8 +9,8 @@
 
 <template>
   <tr class="hover:bg-gray-100 cursor-pointer">
-    <td v-for="(item, keyIndex) in Object.values(props.value)"
-      :class="'pl-8 py-2.5 border-y first:border-l first:rounded-l-lg last:rounded-r-lg last:border-r self-end ' + (props.style || defaultContentStyle)"
+    <td v-for="(item, keyIndex) in Object.values(value)"
+      :class="'pl-8 py-2.5 border-y first:border-l first:rounded-l-lg last:rounded-r-lg last:border-r self-end ' + (style || defaultContentStyle)"
       :key="keyIndex">
       <slot name="cell" :value=item :key-index="keyIndex">
         {{ item }}
