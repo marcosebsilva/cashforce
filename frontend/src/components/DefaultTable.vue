@@ -19,6 +19,7 @@ if (props.content.some((item) => Object.keys(item.value).length !== props.header
         <th
           class="text-start text-n-mid-1 pl-8 text-xs text-n-mid-200"
           v-for="header in props.headers"
+          :key="header"
         >
           {{ header.toUpperCase() }}
         </th>

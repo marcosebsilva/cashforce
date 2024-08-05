@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, it, expect } from 'vitest'
-import Table from '../../components/Table.vue'
+import Table from '../../components/DefaultTable.vue'
 
 describe('Table', () => {
   it('renders a table', () => {

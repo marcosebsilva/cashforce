@@ -21,7 +21,7 @@ export type UserNfeTableProps = {
 export const headers = ['Nota fiscal', 'Sacado', 'Cedente', 'Emissão', 'Valor', 'Status', '']
 </script>
 <script setup lang="ts">
-import Table from './Table.vue'
+import Table from './DefaultTable.vue'
 import DefaultTableRow from './DefaultTableRow.vue'
 import { getOrderStatusColor } from '@/utils/orderStatusColorMap'
 
