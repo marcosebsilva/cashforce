@@ -1,27 +1,35 @@
 <script lang="ts">
-  export const activeColor = 'rgb(0, 173, 140)'
-  export const inactiveColor = 'rgb(161, 168, 184)'
+export const activeColor = 'rgb(0, 173, 140)'
+export const inactiveColor = 'rgb(161, 168, 184)'
 </script>
 
-
 <script setup lang="ts">
-  import { computed } from 'vue'
-  const props = defineProps<{
-    icon: string,
-    title: string,
-    selected: boolean,
-  }>()
+import { computed } from 'vue'
+const props = defineProps<{
+  icon: string
+  title: string
+  selected: boolean
+}>()
 
-  
-  const color = computed(() => props.selected ? activeColor : inactiveColor);
+const color = computed(() => (props.selected ? activeColor : inactiveColor))
 </script>
 
 <template>
   <div class="flex w-full cursor-pointer hover:bg-gray-100">
-    <div id="nav_bar_item--bar" class="w-1 h-20 rounded-xl transition-all self-center" :style="{ backgroundColor: color }"></div>
+    <div
+      id="nav_bar_item--bar"
+      class="w-1 h-20 rounded-xl transition-all self-center"
+      :style="{ backgroundColor: color }"
+    ></div>
     <div class="flex py-6 pl-5 gap-4 w-full items-center">
-      <img :src="icon" :class="`${selected ? 'green_filter' : 'gray_filter'}`">
-      <h1 id="nav_bar_item--text" class="w-fit text-nowrap text-md p-0 font-medium" :style="{ color: color }">{{ title }}</h1>
+      <img :src="icon" :class="`${selected ? 'green_filter' : 'gray_filter'}`" />
+      <h1
+        id="nav_bar_item--text"
+        class="w-fit text-nowrap text-md p-0 font-medium"
+        :style="{ color: color }"
+      >
+        {{ title }}
+      </h1>
     </div>
   </div>
 </template>
