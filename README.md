@@ -24,6 +24,15 @@ Após isso, navegue até a raiz do serviço desejado, instale as dependências e
 #### Frontend
     cd ./backend
     npm install && npm run dev
+
+Existem alguns scripts utilitários que realizam esse processo a partir da raíz do projeto. 
+    
+    npm run install:backend
+    npm run install:frontend
+    npm run start:backend
+    npm run start:frontend
+
+
 Por padrão, os serviços utilizarão as seguintes portas:
 - **Frontend**: 3000
 - **Backend**: 8000
