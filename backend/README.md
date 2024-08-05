@@ -1,1 +1,0 @@
-- Modelos do sequelize gerados utilizando o sequelize-auto

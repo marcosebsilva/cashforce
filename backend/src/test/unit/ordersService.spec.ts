@@ -1,6 +1,8 @@
 import { OrdersService } from "../../services/ordersService";
 import { orders } from "../../models/orders";
+import { mapUsersNfeList } from "../../mappers/UserNfeList";
 jest.mock("../../models/orders");
+jest.mock("../../mappers/UserNfeList");
 
 // there's not much to test on this get operations, but i think it shows that i can do it
 // This is also the reason why this looks the same as the controllers 
@@ -19,7 +21,7 @@ describe("OrderServices", () => {
 
         // assertion
         expect(orders.findAll).toHaveBeenCalled();
-        expect(result).toEqual(EXPECTED_RESPONSE_VALUE);
+        expect(mapUsersNfeList).toHaveBeenCalledWith(EXPECTED_RESPONSE_VALUE);
     });
 
     it("should throw a error if anything happens with sequelize", async () => {
