@@ -38,6 +38,7 @@ Por padrão, os serviços utilizarão as seguintes portas:
 - **Backend**: 8000
 
 Essa configuração pode ser alterada pelas variáveis de ambiente no arquivo `.env` na raíz de cada serviço.
+É importante atentar-se à porta corresponde ao backend no arquivo de configuração do frontend.
 ## Testes
 Cada um dos serviços possuem alguns poucos testes unitários e de integração. Eles podem ser executados com o comando utilizando o comando `npm run test` na raíz do serviço que deseja testar.
 
