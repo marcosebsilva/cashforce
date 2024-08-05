@@ -12,7 +12,7 @@ const error = ref('')
 
 onMounted(async () => {
   try {
-    const response = await axios.get('http://localhost:3001/orders')
+    const response = await axios.get(`http://localhost:${import.meta.env.VITE_BACKEND_PORT}/orders`)
     const mappedData = response.data.map((item: any) => ({
       value: {
         id: item.nNf,
