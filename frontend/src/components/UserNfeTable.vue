@@ -17,13 +17,14 @@
   export type UserNfeTableProps = {
     content: UserNfeTableContentProp[];
   };
+
+  export const headers = ['Nota fiscal', 'Sacado', 'Cedente', 'Emissão', 'Valor', 'Status', ''];
 </script>
 <script setup lang="ts">
   import Table from './Table.vue';
   import DefaultTableRow from './DefaultTableRow.vue';
   import { getOrderStatusColor} from '@/utils/orderStatusColorMap';
-  
-  const headers = ['Nota fiscal', 'Sacado', 'Cedente', 'Emissão', 'Valor', 'Status', ''];
+
   const isButtonCell = (keyIndex: number) => keyIndex === 6;
   const isValueCell = (keyIndex: number) => keyIndex === 4;
   const isStatusCell = (keyIndex: number) => keyIndex === 5;
